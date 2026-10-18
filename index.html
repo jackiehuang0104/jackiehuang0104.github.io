@@ -12,10 +12,19 @@
   <header class="topbar">
     <a class="name" href="#top">Jackie Huang</a>
     <nav aria-label="Main navigation">
-      <a href="#work">Work</a><span>/</span>
-      <a href="#art">Art</a><span>/</span>
-      <a href="#more">More</a>
+      <a href="#work" data-i18n="navWork">Work</a><span>/</span>
+      <a href="#art" data-i18n="navArt">Art</a><span>/</span>
+      <a href="#more" data-i18n="navMore">More</a>
     </nav>
+    <label class="language-picker">
+      <span class="sr-only">Language</span>
+      <select id="language-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="fr">Français</option>
+        <option value="he">עברית</option>
+      </select>
+    </label>
   </header>
 
   <main id="top">
@@ -32,39 +41,39 @@
         <div class="profile-row">
           <button id="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
         </div>
-        <p>Chicago, IL</p>
+        <p data-i18n="location">Chicago, IL</p>
         <a href="mailto:jackiehuang@uchicago.edu">jackiehuang@uchicago.edu</a>
         <div class="small-links">
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/jacqueline-huang-3184392b7" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://x.com/jackie_huang" target="_blank" rel="noreferrer">X</a>
-          <a href="https://substack.com/@imnotmarceline" target="_blank" rel="noreferrer">Substack</a>
         </div>
       </aside>
 
       <div class="bio">
-        <p>Hi, I’m Jackie. I’m from Taiwan, and I currently study economics and philosophy at the University of Chicago.</p>
-        <p>I’m interested in AI safety, technology policy, and how complex ideas get communicated.</p>
-        <p>I make accessible AI safety content through <a href="https://www.instagram.com/aisafety_today/" target="_blank" rel="noreferrer">AI Safety Today</a>. This site is also where I keep track of what I’ve worked on, what I’m learning, and the things I make outside of work.</p>
+        <p data-i18n="intro">Hi, I’m Jackie. I’m from Taiwan, and I currently study economics and philosophy at the University of Chicago.</p>
+        <p data-i18n="interests">I’m interested in AI safety, technology policy, and how complex ideas get communicated.</p>
+        <p data-i18n-html="safetyIntro">I make accessible AI safety content through <a href="https://www.instagram.com/aisafety_today/" target="_blank" rel="noreferrer">AI Safety Today</a>. This site is also where I keep track of what I’ve worked on, what I’m learning, and the things I make outside of work.</p>
 
         <details id="work">
-          <summary>Work and projects</summary>
+          <summary data-i18n="workTitle">Work and projects</summary>
           <div class="detail-body">
-            <p><a href="https://www.instagram.com/aisafety_today/" target="_blank" rel="noreferrer">AI Safety Today ↗</a><br><span>Short, source-grounded explanations of AI safety and policy.</span></p>
-            <p><a href="https://substack.com/@imnotmarceline" target="_blank" rel="noreferrer">Writing ↗</a><br><span>Essays and notes on Substack.</span></p>
-            <p class="placeholder">More research, roles, and projects will go here.</p>
+            <p><a href="https://www.instagram.com/aisafety_today/" target="_blank" rel="noreferrer">AI Safety Today ↗</a><br><span data-i18n="aisDescription">Short, source-grounded explanations of AI safety and policy.</span></p>
+            <p><strong data-i18n="xlabRole">Generalist Organizer, UChicago XLab AI Safety Group</strong><br><span data-i18n="xlabDescription">Supporting AI safety programming and community at UChicago.</span></p>
+            <p><a href="https://substack.com/@imnotmarceline" target="_blank" rel="noreferrer"><span data-i18n="writing">Writing</span> ↗</a><br><span data-i18n="writingDescription">Essays and notes on Substack.</span></p>
+            <p class="placeholder" data-i18n="moreProjects">More research, roles, and projects will go here.</p>
           </div>
         </details>
 
         <details id="more">
-          <summary>More about me</summary>
+          <summary data-i18n="moreTitle">More about me</summary>
           <div class="detail-body">
-            <p>I’m currently learning Hebrew. I previously studied French. I also like traveling, museums, baking, and making art.</p>
-            <p>Currently reading: <cite>Never Let Me Go</cite> by Kazuo Ishiguro and <cite>Brave New World</cite> by Aldous Huxley.</p>
+            <p data-i18n="moreText">I’m currently learning Hebrew. I previously studied French. I also like traveling, museums, baking, and making art.</p>
+            <p data-i18n-html="reading">Currently reading: <cite>Never Let Me Go</cite> by Kazuo Ishiguro and <cite>Brave New World</cite> by Aldous Huxley.</p>
           </div>
         </details>
 
         <details>
-          <summary>Contact</summary>
+          <summary data-i18n="contact">Contact</summary>
           <div class="detail-body contact-list">
             <a href="mailto:jackiehuang@uchicago.edu">jackiehuang@uchicago.edu</a>
             <a href="mailto:jackiehuang0104@gmail.com">jackiehuang0104@gmail.com</a>
@@ -75,7 +84,7 @@
     </section>
 
     <section class="art-section" id="art">
-      <div class="section-line"><h2>Selected art</h2><a href="https://www.instagram.com/aspiring_artist_fr/" target="_blank" rel="noreferrer">@aspiring_artist_fr ↗</a></div>
+      <div class="section-line"><h2 data-i18n="selectedArt">Selected art</h2><a href="https://www.instagram.com/aspiring_artist_fr/" target="_blank" rel="noreferrer">@aspiring_artist_fr ↗</a></div>
       <div class="art-grid">
         <figure class="wide"><img src="assets/art-zebra.jpg" alt="Mixed-media artwork of a zebra in a surreal landscape" loading="lazy"></figure>
         <figure><img src="assets/art-birds.jpg" alt="Red and blue marker drawing of birds" loading="lazy"></figure>
@@ -88,13 +97,13 @@
     </section>
 
     <section class="play" aria-labelledby="play-title">
-      <div class="section-line"><h2 id="play-title">A small distraction</h2><button id="clear-canvas" type="button">clear</button></div>
-      <p>Click anywhere below. Nearby points will find each other.</p>
+      <div class="section-line"><h2 id="play-title" data-i18n="distraction">A small distraction</h2><button id="clear-canvas" type="button" data-i18n="clear">clear</button></div>
+      <p data-i18n="canvasHint">Click anywhere below. Nearby points will find each other.</p>
       <canvas id="constellation" aria-label="Interactive canvas. Click to add points that connect to nearby points."></canvas>
     </section>
   </main>
 
-  <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top">Back to top ↑</a></footer>
+  <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top"><span data-i18n="backToTop">Back to top</span> ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
