@@ -14,10 +14,10 @@ main { width:min(100% - 48px, 960px); margin:105px auto 0; }
 .intro { display:grid; grid-template-columns:230px minmax(0, 580px); gap:68px; align-items:start; }
 .profile { text-align:right; font-size:14px; }
 .profile img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; margin-bottom:18px; filter:saturate(.88); }
-.name-machine { display:grid; grid-template-columns:1fr 24px; gap:8px; align-items:center; margin:0 0 22px auto; width:205px; text-align:left; }
+.name-machine { display:grid; grid-template-columns:1fr 24px; gap:8px; align-items:center; margin:0 0 14px auto; width:225px; text-align:left; }
 .name-window { min-width:0; border:1px solid var(--line); padding:9px 11px 8px; overflow:hidden; background:color-mix(in srgb,var(--bg) 88%,transparent); }
 .name-window strong,.name-window span { display:block; white-space:nowrap; }
-.name-window strong { font:500 17px/1.15 "Newsreader", Georgia, serif; }
+.name-window strong { font:500 23px/1.1 "Newsreader", Georgia, serif; letter-spacing:-.015em; }
 .name-window span { color:var(--muted); font-size:9px; text-transform:uppercase; letter-spacing:.08em; margin-top:3px; }
 .name-window.spinning strong,.name-window.spinning span { animation:slot-roll .42s cubic-bezier(.2,.8,.2,1); }
 #name-lever { position:relative; width:24px; height:48px; padding:0; border:0; background:none; cursor:pointer; }
