@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Noto+Sans+TC:wght@400;500;600&display=swap');
 :root { --bg:#EEF1E8; --text:#17211B; --accent:#416B57; --secondary:#B58A4B; --muted:#617067; --line:#BDC6B9; --link:#17211B; --mouse-x:50vw; --mouse-y:35vh; color-scheme:light; }
 :root.dark { --bg:#111713; --text:#EDF1E9; --accent:#79A98D; --secondary:#D2AA70; --muted:#A8B2A9; --line:#37443B; --link:#EDF1E9; color-scheme:dark; }
 * { box-sizing:border-box; }
@@ -8,7 +8,7 @@ body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 "DM San
 :lang(zh-TW) .name-window strong,
 :lang(zh-TW) .bio>p:first-child,
 :lang(zh-TW) summary,
-:lang(zh-TW) .section-line h2 { font-family:"Noto Serif TC","Songti TC","PMingLiU",serif; letter-spacing:.01em; }
+:lang(zh-TW) .section-line h2 { font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; font-weight:500; letter-spacing:.01em; }
 body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:0; transition:opacity .35s; background:radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(121,169,141,.22), transparent 58%),radial-gradient(280px circle at calc(var(--mouse-x) + 110px) calc(var(--mouse-y) - 80px), rgba(210,170,112,.12), transparent 64%); }
 .dark body::before { opacity:1; }
 a { color:var(--link); text-underline-offset:3px; }
