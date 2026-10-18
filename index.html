@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jackie Huang — economics, philosophy, AI safety, policy, and art.">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Jackie Huang</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="name" href="#top">Jackie Huang</a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a><span>/</span>
+      <a href="#art">Art</a><span>/</span>
+      <a href="#more">More</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <aside class="profile">
+        <img src="assets/jackie-santorini.jpeg" alt="Jackie Huang in Santorini">
+        <div class="profile-row">
+          <h1>Jackie Huang</h1>
+          <button id="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+        </div>
+        <p>Chicago, IL</p>
+        <a href="mailto:jackiehuang@uchicago.edu">jackiehuang [at] uchicago [dot] edu</a>
+        <div class="small-links">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://x.com/jackie_huang" target="_blank" rel="noreferrer">X</a>
+          <a href="https://substack.com/@imnotmarceline" target="_blank" rel="noreferrer">Substack</a>
+        </div>
+      </aside>
+
+      <div class="bio">
+        <p>Hi, I’m Jackie. I study economics and philosophy at the University of Chicago, and I’m interested in AI safety, technology policy, and how complex ideas get communicated.</p>
+        <p>I make accessible AI safety content through <a href="https://www.instagram.com/aisafety_today/" target="_blank" rel="noreferrer">AI Safety Today</a>. This site is also where I keep track of what I’ve worked on, what I’m learning, and the things I make outside of work.</p>
+
+        <details id="work">
+          <summary>Work and projects</summary>
+          <div class="detail-body">
+            <p><a href="https://www.instagram.com/aisafety_today/" target="_blank" rel="noreferrer">AI Safety Today ↗</a><br><span>Short, source-grounded explanations of AI safety and policy.</span></p>
+            <p><a href="https://substack.com/@imnotmarceline" target="_blank" rel="noreferrer">Writing ↗</a><br><span>Essays and notes on Substack.</span></p>
+            <p class="placeholder">More research, roles, and projects will go here.</p>
+          </div>
+        </details>
+
+        <details id="more">
+          <summary>More about me</summary>
+          <div class="detail-body">
+            <p>I’m currently learning Hebrew. I previously studied French. I also like traveling, museums, baking, and making art.</p>
+            <p>Currently reading: <cite>Never Let Me Go</cite> by Kazuo Ishiguro and <cite>Brave New World</cite> by Aldous Huxley.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Contact</summary>
+          <div class="detail-body contact-list">
+            <a href="mailto:jackiehuang@uchicago.edu">jackiehuang@uchicago.edu</a>
+            <a href="mailto:jackiehuang0104@gmail.com">jackiehuang0104@gmail.com</a>
+            <a href="tel:+18723699548">+1 872 369 9548</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="art-section" id="art">
+      <div class="section-line"><h2>Selected art</h2><a href="https://www.instagram.com/aspiring_artist_fr/" target="_blank" rel="noreferrer">@aspiring_artist_fr ↗</a></div>
+      <div class="art-grid">
+        <figure class="wide"><img src="assets/art-zebra.jpg" alt="Mixed-media artwork of a zebra in a surreal landscape" loading="lazy"></figure>
+        <figure><img src="assets/art-birds.jpg" alt="Red and blue marker drawing of birds" loading="lazy"></figure>
+        <figure><img src="assets/art-hands.jpg" alt="Blue and orange ink portrait surrounded by hands" loading="lazy"></figure>
+        <figure><img src="assets/art-tomatoes.jpg" alt="Pencil still life study of tomatoes" loading="lazy"></figure>
+        <figure><img src="assets/art-hydrangea.jpg" alt="Green hydrangea illustration on yellow" loading="lazy"></figure>
+        <figure><img src="assets/art-cat.jpg" alt="Marker portrait of a tortoiseshell cat" loading="lazy"></figure>
+        <figure><img src="assets/art-wall.jpg" alt="Jackie standing beside a large wall drawing of faces" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="play" aria-labelledby="play-title">
+      <div class="section-line"><h2 id="play-title">A small distraction</h2><button id="clear-canvas" type="button">clear</button></div>
+      <p>Click anywhere below. Nearby points will find each other.</p>
+      <canvas id="constellation" aria-label="Interactive canvas. Click to add points that connect to nearby points."></canvas>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
