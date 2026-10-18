@@ -2,6 +2,10 @@ const root = document.documentElement;
 const theme = document.querySelector('#theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark' || (!savedTheme && matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+window.addEventListener('pointermove', event => {
+  root.style.setProperty('--mouse-x', `${event.clientX}px`);
+  root.style.setProperty('--mouse-y', `${event.clientY}px`);
+}, { passive: true });
 theme.addEventListener('click', () => {
   root.classList.toggle('dark');
   localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
