@@ -12,6 +12,26 @@ theme.addEventListener('click', () => {
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
 
+const names = [
+  { name: 'Jackie Huang', label: 'what I go by' },
+  { name: 'Chih-Yi Huang', label: 'official Chinese name' },
+  { name: 'Jacqueline Huang', label: 'official English name' }
+];
+let nameIndex = 0;
+const nameWindow = document.querySelector('.name-window');
+const slotName = document.querySelector('#slot-name');
+const slotLabel = document.querySelector('#slot-label');
+document.querySelector('#name-lever').addEventListener('click', () => {
+  nameIndex = (nameIndex + 1) % names.length;
+  nameWindow.classList.remove('spinning');
+  void nameWindow.offsetWidth;
+  nameWindow.classList.add('spinning');
+  setTimeout(() => {
+    slotName.textContent = names[nameIndex].name;
+    slotLabel.textContent = names[nameIndex].label;
+  }, 190);
+});
+
 const canvas = document.querySelector('#constellation');
 const context = canvas.getContext('2d');
 let points = [];
