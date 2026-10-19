@@ -22,6 +22,30 @@ let currentLanguage = localStorage.getItem('language') || 'en';
 const languageSelect = document.querySelector('#language-select');
 if (!translations[currentLanguage]) currentLanguage = 'en';
 languageSelect.value = currentLanguage;
+function isolateLatinRuns(container) {
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (/[A-Za-z]/.test(node.textContent) && !node.parentElement.closest('a, bdi')) nodes.push(node);
+  }
+  const latinPhrase = /[A-Za-z][A-Za-z0-9]*(?:[ .&'’–—-]+[A-Za-z0-9]+)*/g;
+  nodes.forEach(node => {
+    const text = node.textContent;
+    const fragment = document.createDocumentFragment();
+    let lastIndex = 0;
+    for (const match of text.matchAll(latinPhrase)) {
+      fragment.append(text.slice(lastIndex, match.index));
+      const isolated = document.createElement('bdi');
+      isolated.dir = 'ltr';
+      isolated.textContent = match[0];
+      fragment.append(isolated);
+      lastIndex = match.index + match[0].length;
+    }
+    fragment.append(text.slice(lastIndex));
+    node.replaceWith(fragment);
+  });
+}
 function applyLanguage(language) {
   const copy = translations[language];
   document.documentElement.lang = language;
@@ -29,18 +53,7 @@ function applyLanguage(language) {
   document.querySelectorAll('[data-i18n]').forEach(element => { const key = element.dataset.i18n; element.textContent = copy[key] ?? translations.en[key]; });
   document.querySelectorAll('[data-i18n-html]').forEach(element => { const key = element.dataset.i18nHtml; element.innerHTML = copy[key] ?? translations.en[key]; });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(element => { element.placeholder = copy[element.dataset.i18nPlaceholder] || translations.en[element.dataset.i18nPlaceholder]; });
-  if (language === 'he') {
-    const organization = 'UChicago XLab AI Safety Group';
-    document.querySelectorAll('.work-title').forEach(element => {
-      const label = element.textContent;
-      if (!label.includes(organization)) return;
-      const [before, after] = label.split(organization);
-      const isolatedName = document.createElement('bdi');
-      isolatedName.dir = 'ltr';
-      isolatedName.textContent = organization;
-      element.replaceChildren(document.createTextNode(before), isolatedName, document.createTextNode(after || ''));
-    });
-  }
+  if (language === 'he') isolateLatinRuns(document.querySelector('.bio'));
   names.forEach((item, index) => { item.label = copy.nameLabels[index]; });
   slotLabel.textContent = names[nameIndex].label;
   localStorage.setItem('language', language);

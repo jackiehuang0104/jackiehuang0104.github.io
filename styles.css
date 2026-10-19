@@ -31,6 +31,7 @@ button { color:inherit; }
 [dir="rtl"] bdi,
 [dir="rtl"] .bio a,
 [dir="rtl"] .detail-body a { direction:ltr; unicode-bidi:isolate; }
+[dir="rtl"] bdi { display:inline-block; white-space:nowrap; }
 main { width:min(100% - 48px, 960px); margin:105px auto 0; }
 .intro { display:grid; grid-template-columns:230px minmax(0, 580px); gap:68px; align-items:start; }
 .profile { text-align:right; font-size:14px; }
