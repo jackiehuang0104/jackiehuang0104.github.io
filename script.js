@@ -29,6 +29,18 @@ function applyLanguage(language) {
   document.querySelectorAll('[data-i18n]').forEach(element => { const key = element.dataset.i18n; element.textContent = copy[key] ?? translations.en[key]; });
   document.querySelectorAll('[data-i18n-html]').forEach(element => { const key = element.dataset.i18nHtml; element.innerHTML = copy[key] ?? translations.en[key]; });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(element => { element.placeholder = copy[element.dataset.i18nPlaceholder] || translations.en[element.dataset.i18nPlaceholder]; });
+  if (language === 'he') {
+    const organization = 'UChicago XLab AI Safety Group';
+    document.querySelectorAll('.work-title').forEach(element => {
+      const label = element.textContent;
+      if (!label.includes(organization)) return;
+      const [before, after] = label.split(organization);
+      const isolatedName = document.createElement('bdi');
+      isolatedName.dir = 'ltr';
+      isolatedName.textContent = organization;
+      element.replaceChildren(document.createTextNode(before), isolatedName, document.createTextNode(after || ''));
+    });
+  }
   names.forEach((item, index) => { item.label = copy.nameLabels[index]; });
   slotLabel.textContent = names[nameIndex].label;
   localStorage.setItem('language', language);
