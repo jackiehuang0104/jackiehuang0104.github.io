@@ -19,12 +19,15 @@
     </nav>
     <label class="language-picker">
       <span class="sr-only">Language</span>
-      <select id="language-select" aria-label="Language">
-        <option value="en">English</option>
-        <option value="zh-TW">繁體中文</option>
-        <option value="fr">Français</option>
-        <option value="he">עברית</option>
-      </select>
+      <span class="select-shell">
+        <select id="language-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh-TW">繁體中文 *</option>
+          <option value="fr">Français *</option>
+          <option value="he">עברית *</option>
+        </select>
+      </span>
+      <small>* translations not proofread</small>
     </label>
   </header>
 
@@ -71,6 +74,21 @@
             <p data-i18n="moreText">I’m currently learning Hebrew. I previously studied French. I also like traveling, museums, baking, and making art.</p>
             <p data-i18n-html="reading">Currently reading: <cite>Never Let Me Go</cite> by Kazuo Ishiguro and <cite>Brave New World</cite> by Aldous Huxley.</p>
           </div>
+        </details>
+
+        <details id="feedback">
+          <summary data-i18n="feedbackTitle">Anonymous feedback</summary>
+          <form class="feedback-form" action="https://formsubmit.co/jackiehuang0104@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Anonymous feedback from jackiehuang0104.github.io">
+            <input type="hidden" name="_next" value="https://jackiehuang0104.github.io/?feedback=sent#feedback">
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
+            <label for="feedback-message" data-i18n="feedbackPrompt">What should I know?</label>
+            <textarea id="feedback-message" name="message" rows="4" required data-i18n-placeholder="feedbackPlaceholder" placeholder="Leave a thought, suggestion, or correction."></textarea>
+            <div class="feedback-actions">
+              <span data-i18n="feedbackPrivacy">No name or email requested.</span>
+              <button type="submit" data-i18n="feedbackSend">Send anonymously ↗</button>
+            </div>
+          </form>
         </details>
 
         <details>
