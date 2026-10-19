@@ -52,6 +52,7 @@ summary::-webkit-details-marker { display:none; }
 summary::before { content:"▸"; display:inline-block; width:25px; color:var(--accent); transition:transform .15s; }
 details[open] summary::before { transform:rotate(90deg); }
 .detail-body { padding:0 0 18px 25px; font-size:15px; }.detail-body p:last-child { margin-bottom:0; }.detail-body span,.placeholder { color:var(--muted); }
+.detail-body .work-title { color:var(--link); text-decoration:underline; text-underline-offset:3px; }
 .contact-list { display:flex; flex-direction:column; gap:5px; }
 .art-section,.play { margin-top:130px; }
 .section-line { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--text); padding-bottom:10px; margin-bottom:22px; }
