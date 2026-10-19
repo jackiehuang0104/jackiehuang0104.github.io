@@ -52,6 +52,7 @@ document.querySelector('#name-lever').addEventListener('click', () => {
   nameWindow.classList.add('spinning');
   setTimeout(() => {
     slotName.textContent = names[nameIndex].name;
+    slotName.classList.toggle('long-name', nameIndex === 2);
     slotLabel.textContent = names[nameIndex].label;
   }, 190);
 });
