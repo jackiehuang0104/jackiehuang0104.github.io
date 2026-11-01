@@ -98,13 +98,13 @@ details[open] summary::before { transform:rotate(90deg); }
 .art-page .art-grid figure:last-child { grid-column:span 2; }
 .museum-section { margin-top:135px; }
 .museum-section .section-line span { color:var(--muted); font-size:12px; }
-.globe-layout { display:grid; grid-template-columns:minmax(320px, 1.15fr) minmax(240px, .85fr); gap:70px; align-items:center; }
-.globe-wrap { position:relative; min-width:0; }
+.globe-layout { display:grid; grid-template-columns:minmax(320px, 1.15fr) minmax(240px, .85fr); gap:70px; align-items:start; }
+.globe-wrap { position:sticky; top:82px; min-width:0; align-self:start; }
 #museum-globe { display:block; width:100%; aspect-ratio:1; cursor:grab; touch-action:none; }
 #museum-globe:active { cursor:grabbing; }
 .globe-pin { position:absolute; width:15px; height:15px; padding:0; border:3px solid var(--bg); border-radius:50%; background:var(--secondary); box-shadow:0 0 0 1px var(--text); transform:translate(-50%,-50%); cursor:pointer; z-index:2; }
 .globe-pin:hover,.globe-pin:focus-visible { width:20px; height:20px; outline:none; }
-.globe-instruction { position:absolute; right:5%; bottom:5%; margin:0; color:var(--muted); font-size:11px; }
+.globe-instruction { margin:20px 5% 0; color:var(--muted); font-size:11px; text-align:right; }
 .museum-copy { max-width:390px; }
 .museum-copy p { margin:0 0 20px; }
 .museum-copy .placeholder { font-size:13px; }
@@ -120,18 +120,18 @@ details[open] summary::before { transform:rotate(90deg); }
 .travel-card>div:first-child { margin-bottom:15px; }
 .travel-category { border-top:1px solid var(--line); }
 .travel-category:last-of-type { border-bottom:1px solid var(--line); }
-.travel-category summary { display:flex; justify-content:space-between; align-items:center; padding:10px 0; font:500 14px/1.4 "DM Sans",Arial,sans-serif; }
+.travel-category summary { display:grid; grid-template-columns:19px minmax(0,1fr) auto; align-items:center; gap:7px; min-height:44px; padding:7px 0; font:500 14px/1.4 "DM Sans",Arial,sans-serif; user-select:none; touch-action:manipulation; -webkit-tap-highlight-color:transparent; }
 .travel-category summary::before { width:19px; font-size:12px; }
-.travel-category summary small { margin-left:auto; color:var(--muted); font-size:10px; }
+.travel-category summary small { color:var(--muted); font-size:10px; }
+.travel-category summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
 .travel-grid { display:grid; grid-template-columns:1fr 1fr; gap:7px; padding:0 0 12px 19px; }
-.travel-grid img { height:165px; }
+.travel-grid img { height:165px; background:var(--bg); }
 .travel-grid.single { grid-template-columns:1fr; }
 .travel-grid.single img { height:auto; max-height:360px; }
 [dir="rtl"] .travel-grid { padding-right:19px; padding-left:0; }
-[dir="rtl"] .travel-category summary small { margin-right:auto; margin-left:0; }
 @keyframes entry-pulse { 0%{border-color:var(--secondary);background:color-mix(in srgb,var(--secondary) 12%,transparent)} 100%{border-color:var(--line);background:transparent} }
 [dir="rtl"] .art-intro,[dir="rtl"] .museum-copy { text-align:right; }
-[dir="rtl"] .globe-instruction { right:auto; left:5%; }
+[dir="rtl"] .globe-instruction { text-align:left; }
 [dir="rtl"] body.art-page { direction:ltr; }
 [dir="rtl"] .art-page .topbar nav,
 [dir="rtl"] .art-page .language-picker,
@@ -141,5 +141,5 @@ details[open] summary::before { transform:rotate(90deg); }
 [dir="rtl"] .art-page .art-grid,
 [dir="rtl"] .art-page .globe-wrap { direction:ltr; }
 footer { width:min(100% - 48px, 960px); margin:90px auto 28px; display:flex; justify-content:space-between; color:var(--muted); font-size:12px; }
-@media(max-width:700px){ .topbar{width:calc(100% - 30px);grid-template-columns:1fr auto}.topbar nav{display:none}.language-picker{display:grid;justify-items:end;gap:2px}.language-picker small{font-size:8px}.header-tools{gap:6px}main{width:calc(100% - 30px);margin-top:55px}.intro{grid-template-columns:1fr;gap:38px}.profile{text-align:left}.profile img{max-width:360px}.name-machine{margin-left:0}.profile-row,.small-links{justify-content:flex-start}.art-section,.play{margin-top:90px}.art-grid,.art-page .art-grid{grid-template-columns:1fr 1fr}.art-grid .wide,.art-page .art-grid .wide{grid-column:span 2}.art-grid figure:last-child,.art-page .art-grid figure:last-child{grid-column:span 2}.art-intro{margin-bottom:70px}.art-intro h1{font-size:38px}.museum-section{margin-top:95px}.globe-layout{grid-template-columns:1fr;gap:30px}.museum-copy{max-width:100%}.museum-card-images.two-up{grid-template-columns:1fr}.museum-card-images.two-up img{height:auto;max-height:420px}.travel-grid img{height:145px}footer{width:calc(100% - 30px)}}
+@media(max-width:700px){ .topbar{width:calc(100% - 30px);grid-template-columns:1fr auto}.topbar nav{display:none}.language-picker{display:grid;justify-items:end;gap:2px}.language-picker small{font-size:8px}.header-tools{gap:6px}main{width:calc(100% - 30px);margin-top:55px}.intro{grid-template-columns:1fr;gap:38px}.profile{text-align:left}.profile img{max-width:360px}.name-machine{margin-left:0}.profile-row,.small-links{justify-content:flex-start}.art-section,.play{margin-top:90px}.art-grid,.art-page .art-grid{grid-template-columns:1fr 1fr}.art-grid .wide,.art-page .art-grid .wide{grid-column:span 2}.art-grid figure:last-child,.art-page .art-grid figure:last-child{grid-column:span 2}.art-intro{margin-bottom:70px}.art-intro h1{font-size:38px}.museum-section{margin-top:95px}.globe-layout{grid-template-columns:1fr;gap:30px}.globe-wrap{position:relative;top:auto}.museum-copy{max-width:100%}.museum-card-images.two-up{grid-template-columns:1fr}.museum-card-images.two-up img{height:auto;max-height:420px}.travel-grid img{height:145px}footer{width:calc(100% - 30px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.name-window.spinning strong,.name-window.spinning span{animation:none}}

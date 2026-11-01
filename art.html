@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#EEF1E8">
   <title>Art — Jackie Huang</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261101-6">
+  <link rel="stylesheet" href="styles.css?v=20261101-7">
 </head>
 <body class="art-page">
   <header class="topbar">
@@ -53,7 +53,7 @@
     </section>
 
     <section class="museum-section" aria-labelledby="museum-title">
-      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">5 places mapped</span></div>
+      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">12 places mapped</span></div>
       <div class="globe-layout">
         <div class="globe-wrap">
           <canvas id="museum-globe" width="640" height="640" aria-label="An interactive rotating globe for artworks seen around the world" data-i18n-aria="globeLabel"></canvas>
@@ -62,31 +62,58 @@
           <button class="globe-pin" id="rome-pin" type="button" aria-label="View art and architecture seen in Rome" data-i18n-aria="romePin"></button>
           <button class="globe-pin" id="venice-pin" type="button" aria-label="View art and architecture seen in Venice" data-i18n-aria="venicePin"></button>
           <button class="globe-pin" id="netherlands-pin" type="button" aria-label="View artworks seen in the Netherlands" data-i18n-aria="netherlandsPin"></button>
+          <button class="globe-pin" id="suzhou-pin" type="button" aria-label="View architecture seen in Suzhou" data-i18n-aria="suzhouPin"></button>
+          <button class="globe-pin" id="boston-pin" type="button" aria-label="View artworks seen in Boston" data-i18n-aria="bostonPin"></button>
+          <button class="globe-pin" id="new-york-pin" type="button" aria-label="View artworks seen at MoMA in New York" data-i18n-aria="newYorkPin"></button>
+          <button class="globe-pin" id="malaysia-pin" type="button" aria-label="View architecture seen in Malaysia" data-i18n-aria="malaysiaPin"></button>
+          <button class="globe-pin" id="california-pin" type="button" aria-label="View art and architecture seen in California" data-i18n-aria="californiaPin"></button>
+          <button class="globe-pin" id="dc-pin" type="button" aria-label="View art and landmarks seen in Washington, DC" data-i18n-aria="dcPin"></button>
+          <button class="globe-pin" id="philadelphia-pin" type="button" aria-label="View artworks seen in Philadelphia" data-i18n-aria="philadelphiaPin"></button>
           <p class="globe-instruction" data-i18n="globeInstruction">Drag to turn the globe.</p>
         </div>
-        <div class="museum-copy">
-          <p data-i18n="museumIntro">I’m building a map of memorable works I’ve encountered in person. Each pin will open a photograph and a note about where I saw it.</p>
-          <article class="museum-card" id="chicago-art-entry">
-            <img src="assets/aic-the-kiss-june-2026.jpeg" alt="The Kiss displayed at the Art Institute of Chicago" data-i18n-alt="altTheKiss" loading="lazy">
-            <div>
-              <h3><cite>The Kiss</cite></h3>
-              <p data-i18n="chicagoVisit">Art Institute of Chicago · June 2026</p>
-            </div>
+        <div class="museum-copy" aria-live="polite">
+          <article class="museum-card travel-card" id="chicago-art-entry">
+            <div><h3 data-i18n="chicagoTitle">Chicago</h3><p data-i18n="chicagoVisit">Art Institute of Chicago · multiple visits</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="october2024">October 2024</span><small>7</small></summary>
+              <div class="travel-grid">
+                <img src="assets/chicago-aic-relief-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-great-wave-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-nighthawks-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-american-gothic-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-child-bath-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-la-grande-jatte-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-piano-october-2024.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="may2025">May 2025</span><small>4</small></summary>
+              <div class="travel-grid">
+                <img src="assets/chicago-aic-frida-may-2025.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-warhol-may-2025.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-dogs-may-2025.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+                <img src="assets/chicago-aic-frida-painting-may-2025.jpeg" alt="Artwork at the Art Institute of Chicago" data-i18n-alt="altAic" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="june2026">June 2026</span><small>1</small></summary>
+              <div class="travel-grid single"><img src="assets/aic-the-kiss-june-2026.jpeg" alt="The Kiss displayed at the Art Institute of Chicago" data-i18n-alt="altTheKiss" loading="lazy"></div>
+            </details>
           </article>
-          <article class="museum-card" id="athens-art-entry">
-            <div class="museum-card-images two-up">
-              <img src="assets/athens-national-archaeological-museum-september-2026.jpeg" alt="A sculpture gallery at the National Archaeological Museum in Athens" data-i18n-alt="altAthensGallery" loading="lazy">
-              <img src="assets/athens-national-archaeological-museum-mural-september-2026.jpeg" alt="A large decorative artwork at the National Archaeological Museum in Athens" data-i18n-alt="altAthensArtwork" loading="lazy">
-            </div>
-            <div>
-              <h3 data-i18n="athensGallery">Sculpture galleries</h3>
-              <p data-i18n="athensVisit">National Archaeological Museum, Athens · September 2026</p>
-            </div>
+          <article class="museum-card travel-card" id="athens-art-entry">
+            <div><h3 data-i18n="athensTitle">Athens</h3><p data-i18n="athensVisit">National Archaeological Museum · September 2026</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="athensGallery">National Archaeological Museum</span><small>2</small></summary>
+              <div class="travel-grid">
+                <img src="assets/athens-national-archaeological-museum-september-2026.jpeg" alt="A sculpture gallery at the National Archaeological Museum in Athens" data-i18n-alt="altAthensGallery" loading="lazy">
+                <img src="assets/athens-national-archaeological-museum-mural-september-2026.jpeg" alt="A large decorative artwork at the National Archaeological Museum in Athens" data-i18n-alt="altAthensArtwork" loading="lazy">
+              </div>
+            </details>
           </article>
           <article class="museum-card travel-card" id="netherlands-art-entry">
             <div>
               <h3 data-i18n="netherlandsTitle">The Netherlands</h3>
-              <p data-i18n="netherlandsVisit">The Hague &amp; Amsterdam · 2023 and January 2024</p>
+              <p data-i18n="netherlandsVisit">The Hague &amp; Amsterdam · January 2023 and January 2024</p>
             </div>
             <details class="travel-category">
               <summary><span>Mauritshuis</span><small>3</small></summary>
@@ -181,6 +208,134 @@
               <div class="travel-grid single"><img src="assets/venice-guggenheim-gallery-2026.jpeg" alt="A gallery at the Peggy Guggenheim Collection in Venice" data-i18n-alt="altGuggenheim" loading="lazy"></div>
             </details>
           </article>
+          <article class="museum-card travel-card" id="suzhou-art-entry">
+            <div><h3 data-i18n="suzhouTitle">Suzhou</h3><p data-i18n="suzhouVisit">Architecture · June 2024</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="suzhouArchitecture">Historic architecture</span><small>1</small></summary>
+              <div class="travel-grid single"><img src="assets/suzhou-pagoda-june-2024.jpeg" alt="Historic pagoda in Suzhou" data-i18n-alt="altSuzhou" loading="lazy"></div>
+            </details>
+          </article>
+          <article class="museum-card travel-card" id="boston-art-entry">
+            <div><h3 data-i18n="bostonTitle">Boston</h3><p data-i18n="bostonVisit">Museums · November 2024</p></div>
+            <details class="travel-category">
+              <summary><span>Harvard Art Museums</span><small>5</small></summary>
+              <div class="travel-grid">
+                <img src="assets/boston-harvard-drawing-november-2024.jpeg" alt="Artwork at Harvard Art Museums" data-i18n-alt="altHarvard" loading="lazy">
+                <img src="assets/boston-harvard-dali-november-2024.jpeg" alt="Artwork at Harvard Art Museums" data-i18n-alt="altHarvard" loading="lazy">
+                <img src="assets/boston-harvard-monet-november-2024.jpeg" alt="Artwork at Harvard Art Museums" data-i18n-alt="altHarvard" loading="lazy">
+                <img src="assets/boston-harvard-klimt-november-2024.jpeg" alt="Artwork at Harvard Art Museums" data-i18n-alt="altHarvard" loading="lazy">
+                <img src="assets/boston-harvard-marc-november-2024.jpeg" alt="Artwork at Harvard Art Museums" data-i18n-alt="altHarvard" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="mfaBoston">Museum of Fine Arts, Boston</span><small>4</small></summary>
+              <div class="travel-grid">
+                <img src="assets/boston-mfa-course-empire-november-2024.jpeg" alt="Artwork at the Museum of Fine Arts, Boston" data-i18n-alt="altMfaBoston" loading="lazy">
+                <img src="assets/boston-mfa-dance-bougival-november-2024.jpeg" alt="Artwork at the Museum of Fine Arts, Boston" data-i18n-alt="altMfaBoston" loading="lazy">
+                <img src="assets/boston-mfa-turner-november-2024.jpeg" alt="Artwork at the Museum of Fine Arts, Boston" data-i18n-alt="altMfaBoston" loading="lazy">
+                <img src="assets/boston-mfa-egyptian-november-2024.jpeg" alt="Artwork at the Museum of Fine Arts, Boston" data-i18n-alt="altMfaBoston" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span>Isabella Stewart Gardner Museum</span><small>2</small></summary>
+              <div class="travel-grid">
+                <img src="assets/boston-gardner-courtyard-november-2024.jpeg" alt="Courtyard at the Isabella Stewart Gardner Museum" data-i18n-alt="altGardner" loading="lazy">
+                <img src="assets/boston-gardner-gallery-november-2024.jpeg" alt="Gallery at the Isabella Stewart Gardner Museum" data-i18n-alt="altGardner" loading="lazy">
+              </div>
+            </details>
+          </article>
+          <article class="museum-card travel-card" id="new-york-art-entry">
+            <div><h3 data-i18n="newYorkTitle">New York City</h3><p data-i18n="newYorkVisit">Museums · March 2025</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="moma">Museum of Modern Art (MoMA)</span><small>10</small></summary>
+              <div class="travel-grid">
+                <img src="assets/nyc-moma-fur-teacup-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-matisse-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-klimt-park-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-klimt-hope-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-picasso-demoiselles-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-picasso-musicians-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-monet-water-lilies-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-starry-night-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-matisse-red-studio-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+                <img src="assets/nyc-moma-cubism-march-2025.jpeg" alt="Artwork at the Museum of Modern Art in New York" data-i18n-alt="altMoma" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="metMuseum">The Metropolitan Museum of Art</span><small>6</small></summary>
+              <div class="travel-grid">
+                <img src="assets/nyc-met-wanderer-march-2025.jpeg" alt="Artwork at the Metropolitan Museum of Art" data-i18n-alt="altMet" loading="lazy">
+                <img src="assets/nyc-met-sculpture-march-2025.jpeg" alt="Sculpture at the Metropolitan Museum of Art" data-i18n-alt="altMet" loading="lazy">
+                <img src="assets/nyc-met-swimmer-march-2025.jpeg" alt="Artwork at the Metropolitan Museum of Art" data-i18n-alt="altMet" loading="lazy">
+                <img src="assets/nyc-met-monet-march-2025.jpeg" alt="Paintings at the Metropolitan Museum of Art" data-i18n-alt="altMet" loading="lazy">
+                <img src="assets/nyc-met-landscape-march-2025.jpeg" alt="Artwork at the Metropolitan Museum of Art" data-i18n-alt="altMet" loading="lazy">
+                <img src="assets/nyc-met-sculptor-studio-march-2025.jpeg" alt="Artwork at the Metropolitan Museum of Art" data-i18n-alt="altMet" loading="lazy">
+              </div>
+            </details>
+          </article>
+          <article class="museum-card travel-card" id="malaysia-art-entry">
+            <div><h3 data-i18n="malaysiaTitle">Malaysia</h3><p data-i18n="malaysiaVisit">Street and temple architecture · August 2025</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="malaysiaArchitecture">Architecture and streets</span><small>2</small></summary>
+              <div class="travel-grid">
+                <img src="assets/malaysia-umbrella-street-august-2025.jpeg" alt="Colorful umbrella-covered street in Malaysia" data-i18n-alt="altMalaysia" loading="lazy">
+                <img src="assets/malaysia-temple-august-2025.jpeg" alt="Chinese temple architecture in Malaysia" data-i18n-alt="altMalaysia" loading="lazy">
+              </div>
+            </details>
+          </article>
+          <article class="museum-card travel-card" id="california-art-entry">
+            <div><h3 data-i18n="californiaTitle">California</h3><p data-i18n="californiaVisit">San Francisco, Stanford &amp; Los Angeles · November 2025</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="sanFrancisco">San Francisco</span><small>2</small></summary>
+              <div class="travel-grid">
+                <img src="assets/california-sf-palace-fine-arts-november-2025.jpeg" alt="Palace of Fine Arts in San Francisco" data-i18n-alt="altSanFrancisco" loading="lazy">
+                <img src="assets/california-sf-el-greco-november-2025.jpeg" alt="Painting displayed in San Francisco" data-i18n-alt="altSanFrancisco" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span>Stanford</span><small>3</small></summary>
+              <div class="travel-grid">
+                <img src="assets/california-stanford-rodin-november-2025.jpeg" alt="Rodin sculpture at Stanford" data-i18n-alt="altStanford" loading="lazy">
+                <img src="assets/california-stanford-burghers-november-2025.jpeg" alt="Rodin sculptures at Stanford" data-i18n-alt="altStanford" loading="lazy">
+                <img src="assets/california-stanford-church-november-2025.jpeg" alt="Stanford Memorial Church interior" data-i18n-alt="altStanford" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="losAngeles">Los Angeles</span><small>3</small></summary>
+              <div class="travel-grid">
+                <img src="assets/california-la-film-rose-november-2025.jpeg" alt="Film artifact displayed in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
+                <img src="assets/california-la-getty-spring-november-2025.jpeg" alt="Painting displayed in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
+                <img src="assets/california-la-getty-irises-november-2025.jpeg" alt="Painting displayed in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
+              </div>
+            </details>
+          </article>
+          <article class="museum-card travel-card" id="dc-philly-art-entry">
+            <div><h3 data-i18n="dcPhillyTitle">Washington, DC &amp; Philadelphia</h3><p data-i18n="dcPhillyVisit">Museums, monuments, and architecture · March 2026</p></div>
+            <details class="travel-category">
+              <summary><span data-i18n="washingtonDc">Washington, DC</span><small>6</small></summary>
+              <div class="travel-grid">
+                <img src="assets/dc-national-mall-march-2026.jpeg" alt="National Mall in Washington, DC" data-i18n-alt="altDc" loading="lazy">
+                <img src="assets/dc-national-archives-march-2026.jpeg" alt="United States Constitution at the National Archives" data-i18n-alt="altDc" loading="lazy">
+                <img src="assets/dc-architecture-detail-march-2026.jpeg" alt="Architectural detail in Washington, DC" data-i18n-alt="altDc" loading="lazy">
+                <img src="assets/dc-modern-water-glasses-march-2026.jpeg" alt="Artwork displayed in Washington, DC" data-i18n-alt="altDc" loading="lazy">
+                <img src="assets/dc-modern-abstract-march-2026.jpeg" alt="Artwork displayed in Washington, DC" data-i18n-alt="altDc" loading="lazy">
+                <img src="assets/dc-monet-march-2026.jpeg" alt="Painting displayed in Washington, DC" data-i18n-alt="altDc" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="philadelphia">Philadelphia</span><small>8</small></summary>
+              <div class="travel-grid">
+                <img src="assets/philly-battle-painting-march-2026.jpeg" alt="Artwork displayed in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-hamilton-portrait-march-2026.jpeg" alt="Portrait displayed in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-landscape-march-2026.jpeg" alt="Painting displayed in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-four-panels-march-2026.jpeg" alt="Artwork displayed in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-kandinsky-march-2026.jpeg" alt="Artwork displayed in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-modern-abstract-march-2026.jpeg" alt="Artwork displayed in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-installation-march-2026.jpeg" alt="Art installation in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+                <img src="assets/philly-museum-interior-march-2026.jpeg" alt="Museum interior in Philadelphia" data-i18n-alt="altPhiladelphia" loading="lazy">
+              </div>
+            </details>
+          </article>
         </div>
       </div>
     </section>
@@ -188,6 +343,6 @@
 
   <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top"><span data-i18n="backToTop">Back to top</span> ↑</a></footer>
   <script src="assets/topojson-client.min.js"></script>
-  <script src="art.js?v=20261101-14"></script>
+  <script src="art.js?v=20261101-17"></script>
 </body>
 </html>
