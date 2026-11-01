@@ -53,7 +53,7 @@
     </section>
 
     <section class="museum-section" aria-labelledby="museum-title">
-      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">4 cities mapped</span></div>
+      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">5 places mapped</span></div>
       <div class="globe-layout">
         <div class="globe-wrap">
           <canvas id="museum-globe" width="640" height="640" aria-label="An interactive rotating globe for artworks seen around the world" data-i18n-aria="globeLabel"></canvas>
@@ -61,6 +61,7 @@
           <button class="globe-pin" id="athens-pin" type="button" aria-label="View the museum visit in Athens" data-i18n-aria="athensPin"></button>
           <button class="globe-pin" id="rome-pin" type="button" aria-label="View art and architecture seen in Rome" data-i18n-aria="romePin"></button>
           <button class="globe-pin" id="venice-pin" type="button" aria-label="View art and architecture seen in Venice" data-i18n-aria="venicePin"></button>
+          <button class="globe-pin" id="netherlands-pin" type="button" aria-label="View artworks seen in the Netherlands" data-i18n-aria="netherlandsPin"></button>
           <p class="globe-instruction" data-i18n="globeInstruction">Drag to turn the globe.</p>
         </div>
         <div class="museum-copy">
@@ -81,6 +82,30 @@
               <h3 data-i18n="athensGallery">Sculpture galleries</h3>
               <p data-i18n="athensVisit">National Archaeological Museum, Athens · September 2026</p>
             </div>
+          </article>
+          <article class="museum-card travel-card" id="netherlands-art-entry">
+            <div>
+              <h3 data-i18n="netherlandsTitle">The Netherlands</h3>
+              <p data-i18n="netherlandsVisit">The Hague &amp; Amsterdam · 2023</p>
+            </div>
+            <details class="travel-category">
+              <summary><span>Mauritshuis</span><small>3</small></summary>
+              <div class="travel-grid">
+                <img src="assets/netherlands-mauritshuis-girl-pearl-earring-2023.jpeg" alt="Girl with a Pearl Earring at the Mauritshuis" data-i18n-alt="altMauritshuis" loading="lazy">
+                <img src="assets/netherlands-mauritshuis-gallery-2023.jpeg" alt="Gallery interior at the Mauritshuis" data-i18n-alt="altMauritshuis" loading="lazy">
+                <img src="assets/netherlands-mauritshuis-goldfinch-2023.jpeg" alt="The Goldfinch at the Mauritshuis" data-i18n-alt="altMauritshuis" loading="lazy">
+              </div>
+            </details>
+            <details class="travel-category">
+              <summary><span data-i18n="vanGoghMuseum">Van Gogh Museum</span><small>5</small></summary>
+              <div class="travel-grid">
+                <img src="assets/netherlands-van-gogh-self-portrait-2023.jpeg" alt="Self-Portrait with Grey Felt Hat at the Van Gogh Museum" data-i18n-alt="altVanGoghMuseum" loading="lazy">
+                <img src="assets/netherlands-van-gogh-bedroom-2023.jpeg" alt="The Bedroom at the Van Gogh Museum" data-i18n-alt="altVanGoghMuseum" loading="lazy">
+                <img src="assets/netherlands-van-gogh-sunflowers-2023.jpeg" alt="Sunflowers at the Van Gogh Museum" data-i18n-alt="altVanGoghMuseum" loading="lazy">
+                <img src="assets/netherlands-van-gogh-yellow-house-2023.jpeg" alt="The Yellow House at the Van Gogh Museum" data-i18n-alt="altVanGoghMuseum" loading="lazy">
+                <img src="assets/netherlands-van-gogh-almond-blossom-2023.jpeg" alt="Almond Blossom at the Van Gogh Museum" data-i18n-alt="altVanGoghMuseum" loading="lazy">
+              </div>
+            </details>
           </article>
           <article class="museum-card travel-card" id="rome-art-entry">
             <div>
@@ -157,6 +182,6 @@
 
   <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top"><span data-i18n="backToTop">Back to top</span> ↑</a></footer>
   <script src="assets/topojson-client.min.js"></script>
-  <script src="art.js?v=20261101-12"></script>
+  <script src="art.js?v=20261101-13"></script>
 </body>
 </html>
