@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Art made and encountered by Jackie Huang.">
+  <meta name="theme-color" content="#EEF1E8">
+  <title>Art — Jackie Huang</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261101-3">
+</head>
+<body class="art-page">
+  <header class="topbar">
+    <a class="name" href="index.html">Jackie Huang</a>
+    <nav aria-label="Main navigation" data-i18n-aria="mainNavigation">
+      <a href="index.html#work" data-i18n="navWork">Work</a><span>/</span>
+      <a href="art.html" aria-current="page" data-i18n="navArt">Art</a><span>/</span>
+      <a href="index.html#more" data-i18n="navMore">More</a>
+    </nav>
+    <div class="header-tools">
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode" data-i18n-aria="themeToggle">◐</button>
+      <label class="language-picker">
+        <span class="sr-only" data-i18n="language">Language</span>
+        <span class="select-shell">
+          <select id="language-select" aria-label="Language" data-i18n-aria="language">
+            <option value="en">English</option>
+            <option value="zh-TW">繁體中文 *</option>
+            <option value="fr">Français *</option>
+            <option value="he">עברית *</option>
+          </select>
+        </span>
+        <small data-i18n="translationNote">* translations not proofread</small>
+      </label>
+    </div>
+  </header>
+
+  <main id="top" class="art-main">
+    <section class="art-intro">
+      <p class="eyebrow" data-i18n="pageEyebrow">A visual notebook</p>
+      <h1 data-i18n="pageTitle">Art I make, and art I meet.</h1>
+      <p data-i18n="pageIntro">A growing collection of my own work and the artworks that have stayed with me in museums around the world.</p>
+    </section>
+
+    <section class="art-section" aria-labelledby="my-art-title">
+      <div class="section-line"><h2 id="my-art-title" data-i18n="myArt">Things I’ve made</h2><a href="https://www.instagram.com/aspiring_artist_fr/" target="_blank" rel="noreferrer">@aspiring_artist_fr ↗</a></div>
+      <div class="art-grid">
+        <figure class="wide"><img src="assets/art-zebra.jpg" alt="Mixed-media artwork of a zebra in a surreal landscape" data-i18n-alt="altZebra" loading="lazy"></figure>
+        <figure><img src="assets/art-birds.jpg" alt="Red and blue marker drawing of birds" data-i18n-alt="altBirds" loading="lazy"></figure>
+        <figure><img src="assets/art-hands.jpg" alt="Blue and orange ink portrait surrounded by hands" data-i18n-alt="altHands" loading="lazy"></figure>
+        <figure><img src="assets/art-tomatoes.jpg" alt="Pencil still life study of tomatoes" data-i18n-alt="altTomatoes" loading="lazy"></figure>
+        <figure><img src="assets/art-hydrangea.jpg" alt="Green hydrangea illustration on yellow" data-i18n-alt="altHydrangea" loading="lazy"></figure>
+        <figure><img src="assets/art-cat.jpg" alt="Marker portrait of a tortoiseshell cat" data-i18n-alt="altCat" loading="lazy"></figure>
+        <figure><img src="assets/art-wall.jpg" alt="Jackie standing beside a large wall drawing of faces" data-i18n-alt="altWall" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="museum-section" aria-labelledby="museum-title">
+      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">0 works mapped — for now</span></div>
+      <div class="globe-layout">
+        <div class="globe-wrap">
+          <canvas id="museum-globe" width="640" height="640" aria-label="An interactive rotating globe for artworks seen around the world" data-i18n-aria="globeLabel"></canvas>
+          <p class="globe-instruction" data-i18n="globeInstruction">Drag to turn the globe.</p>
+        </div>
+        <div class="museum-copy">
+          <p data-i18n="museumIntro">I’m building a map of memorable works I’ve encountered in person. Each pin will open a photograph and a note about where I saw it.</p>
+          <p class="placeholder" data-i18n="museumEmpty">The first museum stops are coming soon.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top"><span data-i18n="backToTop">Back to top</span> ↑</a></footer>
+  <script src="art.js?v=20261101-3"></script>
+</body>
+</html>
