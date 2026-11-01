@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#EEF1E8">
   <title>Art — Jackie Huang</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261101-3">
+  <link rel="stylesheet" href="styles.css?v=20261101-4">
 </head>
 <body class="art-page">
   <header class="topbar">
@@ -54,21 +54,28 @@
     </section>
 
     <section class="museum-section" aria-labelledby="museum-title">
-      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">0 works mapped — for now</span></div>
+      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">1 work mapped</span></div>
       <div class="globe-layout">
         <div class="globe-wrap">
           <canvas id="museum-globe" width="640" height="640" aria-label="An interactive rotating globe for artworks seen around the world" data-i18n-aria="globeLabel"></canvas>
+          <button class="globe-pin" id="chicago-pin" type="button" aria-label="View the artwork seen in Chicago" data-i18n-aria="chicagoPin"></button>
           <p class="globe-instruction" data-i18n="globeInstruction">Drag to turn the globe.</p>
         </div>
         <div class="museum-copy">
           <p data-i18n="museumIntro">I’m building a map of memorable works I’ve encountered in person. Each pin will open a photograph and a note about where I saw it.</p>
-          <p class="placeholder" data-i18n="museumEmpty">The first museum stops are coming soon.</p>
+          <article class="museum-card" id="chicago-art-entry">
+            <img src="assets/aic-the-kiss-june-2026.jpeg" alt="The Kiss displayed at the Art Institute of Chicago" data-i18n-alt="altTheKiss" loading="lazy">
+            <div>
+              <h3><cite>The Kiss</cite></h3>
+              <p data-i18n="chicagoVisit">Art Institute of Chicago · June 2026</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top"><span data-i18n="backToTop">Back to top</span> ↑</a></footer>
-  <script src="art.js?v=20261101-4"></script>
+  <script src="art.js?v=20261101-6"></script>
 </body>
 </html>

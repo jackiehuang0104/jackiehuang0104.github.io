@@ -16,32 +16,32 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 
 const translations = {
   en: {
-    mainNavigation:'Main navigation', language:'Language', themeToggle:'Toggle dark mode', navWork:'Work', navArt:'Art', navMore:'More', translationNote:'* translations not proofread',
+    mainNavigation:'Main navigation', language:'Language', themeToggle:'Toggle dark mode', chicagoPin:'View the artwork seen in Chicago', navWork:'Work', navArt:'Art', navMore:'More', translationNote:'* translations not proofread',
     pageTitle:'Art I make & meet!', pageIntro:'A growing collection of my own work and the artworks that have stayed with me in museums around the world.',
-    myArt:'Things I’ve made', museumTitle:'Art I’ve met', museumCounter:'0 works mapped — for now', globeLabel:'An interactive rotating globe for artworks seen around the world', globeInstruction:'Drag to turn the globe.',
-    museumIntro:'I’m building a map of memorable works I’ve encountered in person. Each pin will open a photograph and a note about where I saw it.', museumEmpty:'The first museum stops are coming soon.', backToTop:'Back to top',
-    altZebra:'Mixed-media artwork of a zebra in a surreal landscape', altBirds:'Red and blue marker drawing of birds', altHands:'Blue and orange ink portrait surrounded by hands', altTomatoes:'Pencil still life study of tomatoes', altHydrangea:'Green hydrangea illustration on yellow', altCat:'Marker portrait of a tortoiseshell cat', altWall:'Jackie standing beside a large wall drawing of faces'
+    myArt:'Things I’ve made', museumTitle:'Art I’ve met', museumCounter:'1 work mapped', globeLabel:'An interactive rotating globe for artworks seen around the world', globeInstruction:'Drag to turn the globe. Select a pin to see the artwork.',
+    museumIntro:'I’m building a map of memorable works I’ve encountered in person. Each pin opens a photograph and a note about where I saw it.', chicagoVisit:'Art Institute of Chicago · June 2026', backToTop:'Back to top',
+    altZebra:'Mixed-media artwork of a zebra in a surreal landscape', altBirds:'Red and blue marker drawing of birds', altHands:'Blue and orange ink portrait surrounded by hands', altTomatoes:'Pencil still life study of tomatoes', altHydrangea:'Green hydrangea illustration on yellow', altCat:'Marker portrait of a tortoiseshell cat', altWall:'Jackie standing beside a large wall drawing of faces', altTheKiss:'The Kiss displayed at the Art Institute of Chicago'
   },
   'zh-TW': {
-    mainNavigation:'主要導覽', language:'語言', themeToggle:'切換深色模式', navWork:'經歷', navArt:'藝術', navMore:'關於我', translationNote:'* 翻譯尚未校對',
+    mainNavigation:'主要導覽', language:'語言', themeToggle:'切換深色模式', chicagoPin:'查看在芝加哥看過的作品', navWork:'經歷', navArt:'藝術', navMore:'關於我', translationNote:'* 翻譯尚未校對',
     pageTitle:'我創作與遇見的藝術！', pageIntro:'這裡收藏著我的作品，也記錄那些我在世界各地的博物館裡親眼看過、至今仍難忘的藝術品。',
-    myArt:'我的創作', museumTitle:'旅途中遇見的藝術', museumCounter:'目前標記了 0 件作品', globeLabel:'可旋轉的互動式地球，將用來標記我在世界各地看過的藝術品', globeInstruction:'拖曳即可轉動地球。',
-    museumIntro:'我正在製作一張地圖，記錄那些曾親眼看過、令我難忘的作品。之後每個標記都會附上照片，以及我在哪裡看到它的簡短筆記。', museumEmpty:'第一批博物館參觀紀錄即將加入。', backToTop:'回到頂端',
-    altZebra:'斑馬置身超現實景觀中的複合媒材作品', altBirds:'以紅、藍色麥克筆繪製的鳥', altHands:'被手環繞的藍橘色墨水人物畫', altTomatoes:'番茄的鉛筆靜物素描', altHydrangea:'黃色背景上的綠色繡球花插畫', altCat:'玳瑁貓的麥克筆肖像', altWall:'Jackie 站在一幅大型人臉牆畫旁'
+    myArt:'我的創作', museumTitle:'旅途中遇見的藝術', museumCounter:'已標記 1 件作品', globeLabel:'可旋轉的互動式地球，標記我在世界各地看過的藝術品', globeInstruction:'拖曳即可轉動地球；點選標記可查看作品。',
+    museumIntro:'我正在製作一張地圖，記錄那些曾親眼看過、令我難忘的作品。每個標記都會附上照片，以及我在哪裡看到它的簡短筆記。', chicagoVisit:'芝加哥藝術博物館 · 2026 年 6 月', backToTop:'回到頂端',
+    altZebra:'斑馬置身超現實景觀中的複合媒材作品', altBirds:'以紅、藍色麥克筆繪製的鳥', altHands:'被手環繞的藍橘色墨水人物畫', altTomatoes:'番茄的鉛筆靜物素描', altHydrangea:'黃色背景上的綠色繡球花插畫', altCat:'玳瑁貓的麥克筆肖像', altWall:'Jackie 站在一幅大型人臉牆畫旁', altTheKiss:'在芝加哥藝術博物館展出的《The Kiss》'
   },
   fr: {
-    mainNavigation:'Navigation principale', language:'Langue', themeToggle:'Activer ou désactiver le mode sombre', navWork:'Parcours', navArt:'Art', navMore:'À propos', translationNote:'* traductions non relues',
+    mainNavigation:'Navigation principale', language:'Langue', themeToggle:'Activer ou désactiver le mode sombre', chicagoPin:'Voir l’œuvre découverte à Chicago', navWork:'Parcours', navArt:'Art', navMore:'À propos', translationNote:'* traductions non relues',
     pageTitle:'L’art que je crée et que je découvre !', pageIntro:'Une collection qui s’agrandit au fil du temps : mes propres créations et les œuvres découvertes dans des musées du monde entier qui m’ont marquée.',
-    myArt:'Mes créations', museumTitle:'Des œuvres qui m’ont marquée', museumCounter:'0 œuvre sur la carte — pour l’instant', globeLabel:'Globe interactif et rotatif des œuvres découvertes à travers le monde', globeInstruction:'Faites glisser le globe pour le faire tourner.',
-    museumIntro:'Je rassemble sur cette carte les œuvres marquantes que j’ai vues en personne. Chaque repère donnera accès à une photo et à quelques mots sur le lieu où je les ai découvertes.', museumEmpty:'Les premières visites seront bientôt ajoutées.', backToTop:'Retour en haut',
-    altZebra:'Œuvre en techniques mixtes représentant un zèbre dans un paysage surréaliste', altBirds:'Dessin d’oiseaux au feutre rouge et bleu', altHands:'Portrait à l’encre bleue et orange entouré de mains', altTomatoes:'Étude de tomates au crayon', altHydrangea:'Illustration d’un hortensia vert sur fond jaune', altCat:'Portrait au feutre d’un chat écaille de tortue', altWall:'Jackie devant un grand dessin mural représentant des visages'
+    myArt:'Mes créations', museumTitle:'Des œuvres qui m’ont marquée', museumCounter:'1 œuvre sur la carte', globeLabel:'Globe interactif et rotatif des œuvres découvertes à travers le monde', globeInstruction:'Faites glisser le globe pour le faire tourner. Sélectionnez un repère pour voir l’œuvre.',
+    museumIntro:'Je rassemble sur cette carte les œuvres marquantes que j’ai vues en personne. Chaque repère donne accès à une photo et à quelques mots sur le lieu où je les ai découvertes.', chicagoVisit:'Art Institute of Chicago · juin 2026', backToTop:'Retour en haut',
+    altZebra:'Œuvre en techniques mixtes représentant un zèbre dans un paysage surréaliste', altBirds:'Dessin d’oiseaux au feutre rouge et bleu', altHands:'Portrait à l’encre bleue et orange entouré de mains', altTomatoes:'Étude de tomates au crayon', altHydrangea:'Illustration d’un hortensia vert sur fond jaune', altCat:'Portrait au feutre d’un chat écaille de tortue', altWall:'Jackie devant un grand dessin mural représentant des visages', altTheKiss:'The Kiss exposé à l’Art Institute of Chicago'
   },
   he: {
-    mainNavigation:'ניווט ראשי', language:'שפה', themeToggle:'החלפת מצב תצוגה כהה', navWork:'עשייה', navArt:'אמנות', navMore:'עוד', translationNote:'* התרגומים טרם עברו הגהה',
+    mainNavigation:'ניווט ראשי', language:'שפה', themeToggle:'החלפת מצב תצוגה כהה', chicagoPin:'הצגת היצירה שראיתי בשיקגו', navWork:'עשייה', navArt:'אמנות', navMore:'עוד', translationNote:'* התרגומים טרם עברו הגהה',
     pageTitle:'אמנות שאני יוצרת ופוגשת!', pageIntro:'אוסף שהולך וגדל: יצירות שלי, לצד יצירות שראיתי במוזיאונים ברחבי העולם ונשארו איתי.',
-    myArt:'יצירות שלי', museumTitle:'יצירות שפגשתי בדרך', museumCounter:'0 יצירות על המפה — בינתיים', globeLabel:'גלובוס אינטראקטיבי מסתובב של יצירות אמנות שראיתי ברחבי העולם', globeInstruction:'גררו כדי לסובב את הגלובוס.',
-    museumIntro:'אני בונה מפה של יצירות בלתי נשכחות שראיתי במו עיניי. כל נקודה תיפתח לתמונה ולכמה מילים על המקום שבו ראיתי את היצירה.', museumEmpty:'הביקורים הראשונים במוזיאונים יתווספו בקרוב.', backToTop:'חזרה למעלה',
-    altZebra:'יצירה בטכניקה מעורבת של זברה בנוף סוריאליסטי', altBirds:'ציור של ציפורים בטושים אדומים וכחולים', altHands:'דיוקן בדיו כחולה וכתומה המוקף בידיים', altTomatoes:'רישום טבע דומם של עגבניות בעיפרון', altHydrangea:'איור של הורטנזיה ירוקה על רקע צהוב', altCat:'דיוקן בטושים של חתול בעל פרווה בגוני צב', altWall:'ג׳קי עומדת ליד ציור קיר גדול של פנים'
+    myArt:'יצירות שלי', museumTitle:'יצירות שפגשתי בדרך', museumCounter:'יצירה אחת על המפה', globeLabel:'גלובוס אינטראקטיבי מסתובב של יצירות אמנות שראיתי ברחבי העולם', globeInstruction:'גררו כדי לסובב את הגלובוס. בחרו בנקודה כדי לראות את היצירה.',
+    museumIntro:'אני בונה מפה של יצירות בלתי נשכחות שראיתי במו עיניי. כל נקודה נפתחת לתמונה ולכמה מילים על המקום שבו ראיתי את היצירה.', chicagoVisit:'המכון לאמנות של שיקגו · יוני 2026', backToTop:'חזרה למעלה',
+    altZebra:'יצירה בטכניקה מעורבת של זברה בנוף סוריאליסטי', altBirds:'ציור של ציפורים בטושים אדומים וכחולים', altHands:'דיוקן בדיו כחולה וכתומה המוקף בידיים', altTomatoes:'רישום טבע דומם של עגבניות בעיפרון', altHydrangea:'איור של הורטנזיה ירוקה על רקע צהוב', altCat:'דיוקן בטושים של חתול בעל פרווה בגוני צב', altWall:'ג׳קי עומדת ליד ציור קיר גדול של פנים', altTheKiss:'היצירה The Kiss מוצגת במכון לאמנות של שיקגו'
   }
 };
 
@@ -75,7 +75,8 @@ applyLanguage(currentLanguage);
 
 const canvas = document.querySelector('#museum-globe');
 const context = canvas.getContext('2d');
-let yaw = -.55;
+const chicagoPin = document.querySelector('#chicago-pin');
+let yaw = 1.15;
 let pitch = .22;
 let dragging = false;
 let previous = null;
@@ -152,6 +153,13 @@ function drawGlobe() {
     drawCurve(points, centerX, centerY, radius);
   }
   context.restore();
+
+  const chicago = rotatePoint(41.8796, -87.6237);
+  chicagoPin.hidden = chicago.z < 0;
+  if (!chicagoPin.hidden) {
+    chicagoPin.style.left = `${centerX + chicago.x * radius}px`;
+    chicagoPin.style.top = `${centerY - chicago.y * radius}px`;
+  }
 }
 
 function animate() {
@@ -173,6 +181,13 @@ canvas.addEventListener('pointermove', event => {
 });
 canvas.addEventListener('pointerup', () => { dragging = false; previous = null; });
 canvas.addEventListener('pointercancel', () => { dragging = false; previous = null; });
+chicagoPin.addEventListener('click', () => {
+  const entry = document.querySelector('#chicago-art-entry');
+  entry.scrollIntoView({ behavior:reducedMotion ? 'auto' : 'smooth', block:'center' });
+  entry.classList.remove('selected');
+  void entry.offsetWidth;
+  entry.classList.add('selected');
+});
 window.addEventListener('resize', drawGlobe);
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) cancelAnimationFrame(animationFrame);

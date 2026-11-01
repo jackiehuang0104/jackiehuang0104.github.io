@@ -102,10 +102,18 @@ details[open] summary::before { transform:rotate(90deg); }
 .globe-wrap { position:relative; min-width:0; }
 #museum-globe { display:block; width:100%; aspect-ratio:1; cursor:grab; touch-action:none; }
 #museum-globe:active { cursor:grabbing; }
+.globe-pin { position:absolute; width:15px; height:15px; padding:0; border:3px solid var(--bg); border-radius:50%; background:var(--secondary); box-shadow:0 0 0 1px var(--text); transform:translate(-50%,-50%); cursor:pointer; z-index:2; }
+.globe-pin:hover,.globe-pin:focus-visible { width:20px; height:20px; outline:none; }
 .globe-instruction { position:absolute; right:5%; bottom:5%; margin:0; color:var(--muted); font-size:11px; }
 .museum-copy { max-width:390px; }
 .museum-copy p { margin:0 0 20px; }
 .museum-copy .placeholder { font-size:13px; }
+.museum-card { border-top:1px solid var(--line); padding-top:16px; transition:border-color .25s; }
+.museum-card img { display:block; width:100%; max-height:430px; object-fit:cover; object-position:center 55%; }
+.museum-card h3 { margin:12px 0 2px; font:500 22px/1.2 "Newsreader",Georgia,serif; }
+.museum-card p { margin:0; color:var(--muted); font-size:12px; }
+.museum-card.selected { animation:entry-pulse .8s ease-out; }
+@keyframes entry-pulse { 0%{border-color:var(--secondary);background:color-mix(in srgb,var(--secondary) 12%,transparent)} 100%{border-color:var(--line);background:transparent} }
 [dir="rtl"] .art-intro,[dir="rtl"] .museum-copy { text-align:right; }
 [dir="rtl"] .globe-instruction { right:auto; left:5%; }
 [dir="rtl"] body.art-page { direction:ltr; }
