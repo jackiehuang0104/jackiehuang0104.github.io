@@ -54,7 +54,9 @@ function applyLanguage(language) {
   document.querySelectorAll('[data-i18n-html]').forEach(element => { const key = element.dataset.i18nHtml; element.innerHTML = copy[key] ?? translations.en[key]; });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(element => { element.placeholder = copy[element.dataset.i18nPlaceholder] || translations.en[element.dataset.i18nPlaceholder]; });
   if (language === 'he') isolateLatinRuns(document.querySelector('.bio'));
+  names[1].name = language === 'zh-TW' ? '黃之宜' : 'Chih-Yi Huang';
   names.forEach((item, index) => { item.label = copy.nameLabels[index]; });
+  slotName.textContent = names[nameIndex].name;
   slotLabel.textContent = names[nameIndex].label;
   localStorage.setItem('language', language);
 }
