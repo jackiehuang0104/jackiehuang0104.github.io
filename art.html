@@ -7,13 +7,13 @@
   <meta name="theme-color" content="#EEF1E8">
   <title>Art — Jackie Huang</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261101-7">
+  <link rel="stylesheet" href="styles.css?v=20261102-1">
 </head>
 <body class="art-page">
   <header class="topbar">
     <a class="name" href="index.html">Jackie Huang</a>
     <nav aria-label="Main navigation" data-i18n-aria="mainNavigation">
-      <a href="index.html#work" data-i18n="navWork">Work</a><span>/</span>
+      <a href="index.html" data-i18n="navWork">About</a><span>/</span>
       <a href="art.html" aria-current="page" data-i18n="navArt">Art</a>
     </nav>
     <div class="header-tools">
@@ -53,7 +53,7 @@
     </section>
 
     <section class="museum-section" aria-labelledby="museum-title">
-      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">12 places mapped</span></div>
+      <div class="section-line"><h2 id="museum-title" data-i18n="museumTitle">Art I’ve met</h2><span data-i18n="museumCounter">13 places mapped</span></div>
       <div class="globe-layout">
         <div class="globe-wrap">
           <canvas id="museum-globe" width="640" height="640" aria-label="An interactive rotating globe for artworks seen around the world" data-i18n-aria="globeLabel"></canvas>
@@ -69,6 +69,7 @@
           <button class="globe-pin" id="california-pin" type="button" aria-label="View art and architecture seen in California" data-i18n-aria="californiaPin"></button>
           <button class="globe-pin" id="dc-pin" type="button" aria-label="View art and landmarks seen in Washington, DC" data-i18n-aria="dcPin"></button>
           <button class="globe-pin" id="philadelphia-pin" type="button" aria-label="View artworks seen in Philadelphia" data-i18n-aria="philadelphiaPin"></button>
+          <button class="globe-pin" id="florence-pin" type="button" aria-label="View the Florence photo journal" data-i18n-aria="florencePin"></button>
           <p class="globe-instruction" data-i18n="globeInstruction">Drag to turn the globe.</p>
         </div>
         <div class="museum-copy" aria-live="polite">
@@ -286,10 +287,9 @@
           <article class="museum-card travel-card" id="california-art-entry">
             <div><h3 data-i18n="californiaTitle">California</h3><p data-i18n="californiaVisit">San Francisco, Stanford &amp; Los Angeles · November 2025</p></div>
             <details class="travel-category">
-              <summary><span data-i18n="sanFrancisco">San Francisco</span><small>2</small></summary>
+              <summary><span data-i18n="sanFrancisco">San Francisco</span><small>1</small></summary>
               <div class="travel-grid">
                 <img src="assets/california-sf-palace-fine-arts-november-2025.jpeg" alt="Palace of Fine Arts in San Francisco" data-i18n-alt="altSanFrancisco" loading="lazy">
-                <img src="assets/california-sf-el-greco-november-2025.jpeg" alt="Painting displayed in San Francisco" data-i18n-alt="altSanFrancisco" loading="lazy">
               </div>
             </details>
             <details class="travel-category">
@@ -301,13 +301,21 @@
               </div>
             </details>
             <details class="travel-category">
-              <summary><span data-i18n="losAngeles">Los Angeles</span><small>3</small></summary>
+              <summary><span data-i18n="losAngeles">Los Angeles</span><small>4</small></summary>
               <div class="travel-grid">
+                <img src="assets/california-la-getty-el-greco-november-2025.jpeg" alt="El Greco painting at the Getty Museum in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
                 <img src="assets/california-la-film-rose-november-2025.jpeg" alt="Film artifact displayed in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
                 <img src="assets/california-la-getty-spring-november-2025.jpeg" alt="Painting displayed in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
                 <img src="assets/california-la-getty-irises-november-2025.jpeg" alt="Painting displayed in Los Angeles" data-i18n-alt="altLosAngeles" loading="lazy">
               </div>
             </details>
+          </article>
+          <article class="museum-card travel-card" id="florence-art-entry">
+            <div>
+              <h3 data-i18n="florenceTitle">Florence</h3>
+              <p data-i18n="florenceText">I saw way too much art here.</p>
+              <p><a href="https://substack.com/@imnotmarceline" target="_blank" rel="noreferrer" data-i18n="florenceLink">Find it in my Florence photo journal ↗</a></p>
+            </div>
           </article>
           <article class="museum-card travel-card" id="dc-philly-art-entry">
             <div><h3 data-i18n="dcPhillyTitle">Washington, DC &amp; Philadelphia</h3><p data-i18n="dcPhillyVisit">Museums, monuments, and architecture · March 2026</p></div>
@@ -343,6 +351,6 @@
 
   <footer><span>© <span id="year"></span> Jackie Huang</span><a href="#top"><span data-i18n="backToTop">Back to top</span> ↑</a></footer>
   <script src="assets/topojson-client.min.js"></script>
-  <script src="art.js?v=20261101-17"></script>
+  <script src="art.js?v=20261102-1"></script>
 </body>
 </html>
