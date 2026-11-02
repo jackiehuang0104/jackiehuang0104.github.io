@@ -47,23 +47,23 @@ const translations = {
 
 Object.assign(translations.en, {
   navWork:'About', museumCounter:'13 places mapped', florencePin:'View the Florence photo journal',
-  florenceTitle:'Florence', florenceText:'Florence',
-  florenceLink:'Florence photo journal'
+  florenceTitle:'Florence', florenceDate:'September 2026',
+  florenceLink:'I saw way too much art here. Find it in my photo journal ↗'
 });
 Object.assign(translations['zh-TW'], {
-  navWork:'About', museumCounter:'已標記 13 個地點', florencePin:'查看佛羅倫斯影像日誌',
-  florenceTitle:'佛羅倫斯', florenceText:'Florence',
-  florenceLink:'Florence photo journal'
+  navWork:'關於我', museumCounter:'已標記 13 個地點', florencePin:'查看佛羅倫斯影像日誌',
+  florenceTitle:'佛羅倫斯', florenceDate:'2026 年 9 月',
+  florenceLink:'我在這裡看了多到數不清的藝術。請到我的影像日誌查看 ↗'
 });
 Object.assign(translations.fr, {
-  navWork:'About', museumCounter:'13 lieux sur la carte', florencePin:'Voir le journal photo de Florence',
-  florenceTitle:'Florence', florenceText:'Florence',
-  florenceLink:'Florence photo journal'
+  navWork:'À propos', museumCounter:'13 lieux sur la carte', florencePin:'Voir le journal photo de Florence',
+  florenceTitle:'Florence', florenceDate:'septembre 2026',
+  florenceLink:'J’y ai vu beaucoup trop d’art. Retrouvez tout dans mon journal photo ↗'
 });
 Object.assign(translations.he, {
-  navWork:'About', museumCounter:'שלושה עשר מקומות על המפה', florencePin:'הצגת יומן התמונות מפירנצה',
-  florenceTitle:'פירנצה', florenceText:'Florence',
-  florenceLink:'Florence photo journal'
+  navWork:'אודות', museumCounter:'שלושה עשר מקומות על המפה', florencePin:'הצגת יומן התמונות מפירנצה',
+  florenceTitle:'פירנצה', florenceDate:'ספטמבר 2026',
+  florenceLink:'ראיתי כאן הרבה יותר מדי אמנות. הכול ביומן התמונות שלי ↗'
 });
 
 const languageSelect = document.querySelector('#language-select');
