@@ -314,7 +314,7 @@ canvas.addEventListener('pointerdown', event => {
 canvas.addEventListener('pointermove', event => {
   if (!dragging) return;
   yaw += (event.clientX - previous.x) * .008;
-  pitch = Math.max(-1.1, Math.min(1.1, pitch - (event.clientY - previous.y) * .006));
+  pitch = Math.max(-1.1, Math.min(1.1, pitch + (event.clientY - previous.y) * .006));
   previous = { x:event.clientX, y:event.clientY };
 });
 canvas.addEventListener('pointerup', () => { dragging = false; previous = null; });
